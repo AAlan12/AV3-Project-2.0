@@ -1,0 +1,38 @@
+#header {
+  margin-bottom: 20px;
+}
+
+#tickets {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#Buttickets {
+  color: #000E10;
+}
+
+.backgound-header {
+  box-shadow: #7e7712 0.1em 0.1em 0.2em;
+}
+
+.color-wallet {
+  color: #7e7712;
+  font-weight: bold;
+  margin-right: 35%;
+}
+  
+.ticket {
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-left: -20%;
+}
+
+.image {
+  height: 215px;
+}
+
+.center {
+  margin-left: 35%;
+  text-shadow: #7e7712 0.1em 0.1em 0.2em;
+  color: #000E10;
+}
