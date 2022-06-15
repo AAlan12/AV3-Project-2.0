@@ -12,11 +12,11 @@
 }
 
 .backgound-header {
-  box-shadow: #7e7712 0.1em 0.1em 0.2em;
+  box-shadow: #18a2ab 0.1em 0.1em 0.2em;
 }
 
 .color-wallet {
-  color: #7e7712;
+  color: #18a2ab;
   font-weight: bold;
   margin-right: 35%;
 }
@@ -33,6 +33,6 @@
 
 .center {
   margin-left: 35%;
-  text-shadow: #7e7712 0.1em 0.1em 0.2em;
+  text-shadow: #18a2ab 0.1em 0.1em 0.2em;
   color: #000E10;
 }

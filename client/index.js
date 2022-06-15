@@ -3,10 +3,14 @@ import configuration from '../build/contracts/Tickets.json';
 import 'bootstrap/dist/css/bootstrap.css';
 
 // Importando as imagens
-import beatles from './images/beatles.jpg';
-import ledzeppelin from './images/ledzeppelin.jpg';
-import mj from './images/mj.jpeg';
-import nirvana from './images/nirvana.jpg';
+import hongKong from './images/HongKong.jpeg';
+import bangkok from './images/Bangkok.jpeg';
+import londres from './images/Londres.jpeg';
+import singapura from './images/Singapura.jpeg';
+import macau from './images/Macau.jpeg';
+import paris from './images/Paris2.jpeg';
+import dubai from './images/Dubai.jpeg';
+import newYork from './images/New-York.jpeg';
 
 const createElementFromString = (string) => {
   const el = document.createElement('div');
@@ -33,14 +37,19 @@ const containerTicketsEl = document.getElementById('Buttickets');
 
 let account;
 let  Buttickets = 0;
-const TOTAL_TICKETS = 4;
+const TOTAL_TICKETS = 8;
 const EMPTY_ADDRESS = '0x0000000000000000000000000000000000000000';
 
-const images = [ beatles, ledzeppelin, mj, nirvana];
+const images = [ hongKong, bangkok, londres, singapura, macau, paris, dubai, newYork];
 const details = [
-  'Beatles <br/> Há exatos 48 anos, os Beatles faziam seu último concerto, no Candlestick Park, em São Francisco.', 
-  'Led Zeppelin <br/> Show de 1975', 
-  'Michael Jackson <br/> A lembrança de um show que não aconteceu.','Nirvana <br/> Show de 1994'
+  '<strong>País: <strong/>China <br/> <strong>Cidade: <strong/>Hong Kong <br/> <strong>Guia: <strong/>Lee Shin <br/>',
+  '<strong>País: <strong/>Tailândia <br/> <strong>Cidade: <strong/>Bangkok <br/> <strong>Guia: <strong/>Xin Zhao <br/>',
+  '<strong>País: <strong/>Inglaterra <br/> <strong>Cidade: <strong/>Londres <br/> <strong>Guia: <strong/>Artoria Pendragon <br/>',
+  '<strong>País: <strong/>Malásia <br/> <strong>Cidade: <strong/>Singapura <br/> <strong>Guia: <strong/>Akali Lanling <br/>',
+  '<strong>País: <strong/>China <br/> <strong>Cidade: <strong/>Macau <br/> <strong>Guia: <strong/>Lee Shin <br/>',
+  '<strong>País: <strong/>França <br/> <strong>Cidade: <strong/>Paris <br/> <strong>Guia: <strong/>Jeanne dArc <br/>',
+  '<strong>País: <strong/>Emirados Árabes Unidos <br/> <strong>Cidade: <strong/>Dubai <br/> <strong>Guia: <strong/>Mo Salah <br>',
+  '<strong>País: <strong/>Estados Unidos <br/> <strong>Cidade: <strong/>New York <br/> <strong>Guia: <strong/>Mary Anning <br/>'  
 ];
 
 const buyTicket = async (ticket) => {
@@ -69,14 +78,14 @@ const refreshTickets = async () => {
               <p class="card-text">${
                 ticket.price / 1e17  // 0.1 ETH
               } Eth</p>
-              <button class="btn btn-primary">Buy Ticket</button>
+              <button class="btn btn-primary">Comprar Pacote</button>
             </div>
         </div>
         `
       );
 
       if (Buttickets > 0) {
-        containerTicketsEl.innerHTML = `<h1>Total de tickets vendidos até agora: ${Buttickets}</h1>`
+        containerTicketsEl.innerHTML = `<h1>Pessoas em que nossos pacotes atenderam: ${Buttickets}</h1>`
       }
 
       ticketEl.onclick = buyTicket.bind(null, ticket);

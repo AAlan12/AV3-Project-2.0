@@ -2,7 +2,7 @@
 
 pragma solidity >=0.4.22 < 0.9.0;
 
-uint constant TOTAL_TICKETS = 4;
+uint constant TOTAL_TICKETS = 8;
 
 contract Tickets {
     address public owner = msg.sender;
